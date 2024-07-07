@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Data Attributes</title>
+</head>
+<body>
+    <h1>Custom Data Attributes</h1>
+    <div data-role="admin" data-id="12345">User: Admin</div>
+    <div data-role="guest" data-id="67890">User: Guest</div>
+    <script>
+        const elements = document.querySelectorAll('[data-role]');
+        elements.forEach(element => {
+            console.log(`Role: ${element.dataset.role}, ID: ${element.dataset.id}`);
+        });
+    </script>
+</body>
+</html>
